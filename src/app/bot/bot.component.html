@@ -1,0 +1,69 @@
+<div class="p-4 text-blue-900">
+  <div class="flex justify-between flex-wrap">
+    <div class="w-0 flex-1 flex">
+      <h3 class="text-lg font-medium">Step 1 . For Loop</h3>
+    </div>
+    <div>
+      <button type="button" class="rounded-md focus:outline-none">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 36 36"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18 8.75C12.8914 8.75 8.75 12.8914 8.75 18C8.75 23.1086 12.8914 27.25 18 27.25C23.1086 27.25 27.25 23.1086 27.25 18C27.25 12.8914 23.1086 8.75 18 8.75ZM7.25 18C7.25 12.0629 12.0629 7.25 18 7.25C23.9371 7.25 28.75 12.0629 28.75 18C28.75 23.9371 23.9371 28.75 18 28.75C12.0629 28.75 7.25 23.9371 7.25 18ZM18 13.75C17.3787 13.75 16.875 14.2537 16.875 14.875C16.875 15.2892 16.5392 15.625 16.125 15.625C15.7108 15.625 15.375 15.2892 15.375 14.875C15.375 13.4253 16.5503 12.25 18 12.25C19.4497 12.25 20.625 13.4253 20.625 14.875C20.625 15.8383 20.1056 16.6796 19.3353 17.1354C19.1385 17.2518 18.9761 17.3789 18.8703 17.5036C18.7675 17.6246 18.75 17.7036 18.75 17.75V19C18.75 19.4142 18.4142 19.75 18 19.75C17.5858 19.75 17.25 19.4142 17.25 19V17.75C17.25 17.2441 17.4715 16.8336 17.7266 16.533C17.9786 16.236 18.2929 16.0092 18.5715 15.8444C18.9044 15.6474 19.125 15.2866 19.125 14.875C19.125 14.2537 18.6213 13.75 18 13.75ZM18 23C18.5523 23 19 22.5523 19 22C19 21.4477 18.5523 21 18 21C17.4477 21 17 21.4477 17 22C17 22.5523 17.4477 23 18 23Z"
+            fill="#80858E"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <div>
+      <button type="button" class="rounded-md px-3">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 36 36"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
+          <path
+            d="M17.9997 19.1663L13.9163 23.2497C13.7636 23.4025 13.5691 23.4788 13.333 23.4788C13.0969 23.4788 12.9025 23.4025 12.7497 23.2497C12.5969 23.0969 12.5205 22.9025 12.5205 22.6663C12.5205 22.4302 12.5969 22.2358 12.7497 22.083L16.833 17.9997L12.7497 13.9163C12.5969 13.7636 12.5205 13.5691 12.5205 13.333C12.5205 13.0969 12.5969 12.9025 12.7497 12.7497C12.9025 12.5969 13.0969 12.5205 13.333 12.5205C13.5691 12.5205 13.7636 12.5969 13.9163 12.7497L17.9997 16.833L22.083 12.7497C22.2358 12.5969 22.4302 12.5205 22.6663 12.5205C22.9025 12.5205 23.0969 12.5969 23.2497 12.7497C23.4025 12.9025 23.4788 13.0969 23.4788 13.333C23.4788 13.5691 23.4025 13.7636 23.2497 13.9163L19.1663 17.9997L23.2497 22.083C23.4025 22.2358 23.4788 22.4302 23.4788 22.6663C23.4788 22.9025 23.4025 23.0969 23.2497 23.2497C23.0969 23.4025 22.9025 23.4788 22.6663 23.4788C22.4302 23.4788 22.2358 23.4025 22.083 23.2497L17.9997 19.1663Z"
+            fill="#80858E"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mt-2 mb-4 text-sm">Select an element</div>
+
+  <div class="mt-2 mb-4 text-sm">
+    <ng-container *ngIf="selectedCount > 0">
+      Great you have selected {{ selectedCount }} element{{
+        selectedCount > 1 ? "s" : ""
+      }}.
+    </ng-container>
+  </div>
+
+  <div class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+    <button
+      type="button"
+      class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+    >
+      Save
+    </button>
+    <button
+      type="button"
+      class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+    >
+      Reset
+    </button>
+  </div>
+</div>
