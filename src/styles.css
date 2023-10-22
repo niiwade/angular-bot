@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.blue-box:hover {
-  border: 1px solid blue;
+/* Blue on hover */
+.hover {
+  outline: 2px solid blue;
 }
 
-.green-box {
-  border: 1px solid green;
+/* Green when clicked/selected */
+.selected {
+  outline: 2px solid green;
 }
 
 * {

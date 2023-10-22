@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { SharedService } from '../shared.service';
+
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -7,21 +7,10 @@ import { Subscription } from 'rxjs';
   templateUrl: './bot.component.html',
   styleUrls: ['./bot.component.css']
 })
-export class BotComponent implements OnDestroy {
+export class BotComponent {
 
-  selectedCount: number = 0;
-  private selectedCountSubscription: Subscription;
 
-  constructor(private sharedService: SharedService) {
-    this.selectedCountSubscription = this.sharedService.selectedCount$.subscribe(
-      (count) => {
-        this.selectedCount = count;
-      }
-    );
-  }
 
-  ngOnDestroy() {
-    this.selectedCountSubscription.unsubscribe();
-  }
+
 
 }

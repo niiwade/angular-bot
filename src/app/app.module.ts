@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BotComponent } from './bot/bot.component';
-import { SharedService } from './shared.service';
+
+
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { SharedService } from './shared.service';
   imports: [
     BrowserModule
   ],
-  providers: [SharedService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
