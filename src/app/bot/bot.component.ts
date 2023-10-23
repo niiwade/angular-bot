@@ -255,6 +255,25 @@ export class BotComponent implements OnInit {
   }
 
 
+  async markAllTasksAsDone() {
+    this.enableInspector = false;
+
+    //  find all checkboxes and mark them as checked
+    const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]')) as HTMLInputElement[];
+    checkboxes.forEach((checkbox: HTMLInputElement) => {
+      checkbox.checked = true;
+      // Dispatch a change event to trigger any associated event listeners
+      const changeEvent = new Event('change', { bubbles: true });
+      checkbox.dispatchEvent(changeEvent);
+    });
+
+    this.enableInspector = true;
+  }
+
+
+
+
+
   async runBot() {
     this.enableInspector = false
     await Promise.all(
@@ -270,6 +289,8 @@ export class BotComponent implements OnInit {
       })
 
     )
+
+    await this.markAllTasksAsDone()
 
     this.enableInspector = true
   }
