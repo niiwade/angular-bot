@@ -1,61 +1,331 @@
-<div class="p-4 text-blue-900">
-  <div class="flex justify-between flex-wrap">
-    <div class="w-0 flex-1 flex">
-      <h3 class="text-lg font-medium">Step 1 . For Loop</h3>
-    </div>
-    <div>
-      <button type="button" class="rounded-md focus:outline-none">
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 36 36"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M18 8.75C12.8914 8.75 8.75 12.8914 8.75 18C8.75 23.1086 12.8914 27.25 18 27.25C23.1086 27.25 27.25 23.1086 27.25 18C27.25 12.8914 23.1086 8.75 18 8.75ZM7.25 18C7.25 12.0629 12.0629 7.25 18 7.25C23.9371 7.25 28.75 12.0629 28.75 18C28.75 23.9371 23.9371 28.75 18 28.75C12.0629 28.75 7.25 23.9371 7.25 18ZM18 13.75C17.3787 13.75 16.875 14.2537 16.875 14.875C16.875 15.2892 16.5392 15.625 16.125 15.625C15.7108 15.625 15.375 15.2892 15.375 14.875C15.375 13.4253 16.5503 12.25 18 12.25C19.4497 12.25 20.625 13.4253 20.625 14.875C20.625 15.8383 20.1056 16.6796 19.3353 17.1354C19.1385 17.2518 18.9761 17.3789 18.8703 17.5036C18.7675 17.6246 18.75 17.7036 18.75 17.75V19C18.75 19.4142 18.4142 19.75 18 19.75C17.5858 19.75 17.25 19.4142 17.25 19V17.75C17.25 17.2441 17.4715 16.8336 17.7266 16.533C17.9786 16.236 18.2929 16.0092 18.5715 15.8444C18.9044 15.6474 19.125 15.2866 19.125 14.875C19.125 14.2537 18.6213 13.75 18 13.75ZM18 23C18.5523 23 19 22.5523 19 22C19 21.4477 18.5523 21 18 21C17.4477 21 17 21.4477 17 22C17 22.5523 17.4477 23 18 23Z"
-            fill="#80858E"
-          />
-        </svg>
-      </button>
+<div class="p-4 text-blue-900" ignore-inspector="true">
+  <div class="step-1" *ngIf="steps === 1">
+    <div class="flex justify-between flex-wrap">
+      <div class="w-0 flex-1 flex"></div>
+      <div>
+        <button type="button" class="rounded-md focus:outline-none">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18 8.75C12.8914 8.75 8.75 12.8914 8.75 18C8.75 23.1086 12.8914 27.25 18 27.25C23.1086 27.25 27.25 23.1086 27.25 18C27.25 12.8914 23.1086 8.75 18 8.75ZM7.25 18C7.25 12.0629 12.0629 7.25 18 7.25C23.9371 7.25 28.75 12.0629 28.75 18C28.75 23.9371 23.9371 28.75 18 28.75C12.0629 28.75 7.25 23.9371 7.25 18ZM18 13.75C17.3787 13.75 16.875 14.2537 16.875 14.875C16.875 15.2892 16.5392 15.625 16.125 15.625C15.7108 15.625 15.375 15.2892 15.375 14.875C15.375 13.4253 16.5503 12.25 18 12.25C19.4497 12.25 20.625 13.4253 20.625 14.875C20.625 15.8383 20.1056 16.6796 19.3353 17.1354C19.1385 17.2518 18.9761 17.3789 18.8703 17.5036C18.7675 17.6246 18.75 17.7036 18.75 17.75V19C18.75 19.4142 18.4142 19.75 18 19.75C17.5858 19.75 17.25 19.4142 17.25 19V17.75C17.25 17.2441 17.4715 16.8336 17.7266 16.533C17.9786 16.236 18.2929 16.0092 18.5715 15.8444C18.9044 15.6474 19.125 15.2866 19.125 14.875C19.125 14.2537 18.6213 13.75 18 13.75ZM18 23C18.5523 23 19 22.5523 19 22C19 21.4477 18.5523 21 18 21C17.4477 21 17 21.4477 17 22C17 22.5523 17.4477 23 18 23Z"
+              fill="#80858E"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div>
+        <button type="button" class="rounded-md px-3">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
+            <path
+              d="M17.9997 19.1663L13.9163 23.2497C13.7636 23.4025 13.5691 23.4788 13.333 23.4788C13.0969 23.4788 12.9025 23.4025 12.7497 23.2497C12.5969 23.0969 12.5205 22.9025 12.5205 22.6663C12.5205 22.4302 12.5969 22.2358 12.7497 22.083L16.833 17.9997L12.7497 13.9163C12.5969 13.7636 12.5205 13.5691 12.5205 13.333C12.5205 13.0969 12.5969 12.9025 12.7497 12.7497C12.9025 12.5969 13.0969 12.5205 13.333 12.5205C13.5691 12.5205 13.7636 12.5969 13.9163 12.7497L17.9997 16.833L22.083 12.7497C22.2358 12.5969 22.4302 12.5205 22.6663 12.5205C22.9025 12.5205 23.0969 12.5969 23.2497 12.7497C23.4025 12.9025 23.4788 13.0969 23.4788 13.333C23.4788 13.5691 23.4025 13.7636 23.2497 13.9163L19.1663 17.9997L23.2497 22.083C23.4025 22.2358 23.4788 22.4302 23.4788 22.6663C23.4788 22.9025 23.4025 23.0969 23.2497 23.2497C23.0969 23.4025 22.9025 23.4788 22.6663 23.4788C22.4302 23.4788 22.2358 23.4025 22.083 23.2497L17.9997 19.1663Z"
+              fill="#80858E"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <div>
-      <button type="button" class="rounded-md px-3">
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 36 36"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
-          <path
-            d="M17.9997 19.1663L13.9163 23.2497C13.7636 23.4025 13.5691 23.4788 13.333 23.4788C13.0969 23.4788 12.9025 23.4025 12.7497 23.2497C12.5969 23.0969 12.5205 22.9025 12.5205 22.6663C12.5205 22.4302 12.5969 22.2358 12.7497 22.083L16.833 17.9997L12.7497 13.9163C12.5969 13.7636 12.5205 13.5691 12.5205 13.333C12.5205 13.0969 12.5969 12.9025 12.7497 12.7497C12.9025 12.5969 13.0969 12.5205 13.333 12.5205C13.5691 12.5205 13.7636 12.5969 13.9163 12.7497L17.9997 16.833L22.083 12.7497C22.2358 12.5969 22.4302 12.5205 22.6663 12.5205C22.9025 12.5205 23.0969 12.5969 23.2497 12.7497C23.4025 12.9025 23.4788 13.0969 23.4788 13.333C23.4788 13.5691 23.4025 13.7636 23.2497 13.9163L19.1663 17.9997L23.2497 22.083C23.4025 22.2358 23.4788 22.4302 23.4788 22.6663C23.4788 22.9025 23.4025 23.0969 23.2497 23.2497C23.0969 23.4025 22.9025 23.4788 22.6663 23.4788C22.4302 23.4788 22.2358 23.4025 22.083 23.2497L17.9997 19.1663Z"
-            fill="#80858E"
-          />
-        </svg>
+    <div class="flex justify-between flex-wrap">
+      <div class="w-0 flex-1 flex">
+        <h3 class="text-lg font-medium">Step 1 . For Loop</h3>
+      </div>
+    </div>
+
+    <div class="mt-2 mb-4 text-sm" *ngIf="mainselectedElement.length < 2">
+      Select an element
+    </div>
+
+    <div class="mt-2 mb-4 text-sm" *ngIf="mainselectedElement.length > 2">
+      <p>
+        Great, You have selected 2 elements, we predicted
+        {{ predictionParentCounter }} additional element
+        {{ predictionParentCounter > 1 ? "s" : "" }}
+      </p>
+      <p>In total , {{ mainselectedElement.length }} elements are selected</p>
+    </div>
+
+    <div class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+      <button
+        type="button"
+        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+        [class]="{
+          'bg-blue-500 text-white': mainselectedElement.length,
+          'bg-gray-200': !mainselectedElement.length
+        }"
+        (click)="steps = 2"
+        [disabled]="!mainselectedElement.length"
+      >
+        Save
+      </button>
+      <button
+        type="button"
+        class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+        (click)="reset()"
+      >
+        Reset
       </button>
     </div>
   </div>
 
-  <div class="mt-2 mb-4 text-sm">Select an element</div>
+  <div class="step-2" *ngIf="steps === 2">
+    <div class="flex justify-between flex-wrap">
+      <div class="w-0 flex-1 flex"></div>
+      <div>
+        <button type="button" class="rounded-md focus:outline-none">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18 8.75C12.8914 8.75 8.75 12.8914 8.75 18C8.75 23.1086 12.8914 27.25 18 27.25C23.1086 27.25 27.25 23.1086 27.25 18C27.25 12.8914 23.1086 8.75 18 8.75ZM7.25 18C7.25 12.0629 12.0629 7.25 18 7.25C23.9371 7.25 28.75 12.0629 28.75 18C28.75 23.9371 23.9371 28.75 18 28.75C12.0629 28.75 7.25 23.9371 7.25 18ZM18 13.75C17.3787 13.75 16.875 14.2537 16.875 14.875C16.875 15.2892 16.5392 15.625 16.125 15.625C15.7108 15.625 15.375 15.2892 15.375 14.875C15.375 13.4253 16.5503 12.25 18 12.25C19.4497 12.25 20.625 13.4253 20.625 14.875C20.625 15.8383 20.1056 16.6796 19.3353 17.1354C19.1385 17.2518 18.9761 17.3789 18.8703 17.5036C18.7675 17.6246 18.75 17.7036 18.75 17.75V19C18.75 19.4142 18.4142 19.75 18 19.75C17.5858 19.75 17.25 19.4142 17.25 19V17.75C17.25 17.2441 17.4715 16.8336 17.7266 16.533C17.9786 16.236 18.2929 16.0092 18.5715 15.8444C18.9044 15.6474 19.125 15.2866 19.125 14.875C19.125 14.2537 18.6213 13.75 18 13.75ZM18 23C18.5523 23 19 22.5523 19 22C19 21.4477 18.5523 21 18 21C17.4477 21 17 21.4477 17 22C17 22.5523 17.4477 23 18 23Z"
+              fill="#80858E"
+            />
+          </svg>
+        </button>
+      </div>
 
-  <div class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-    <button
-      type="button"
-      class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
-    >
-      Save
-    </button>
-    <button
-      type="button"
-      class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-    >
-      Reset
-    </button>
+      <div>
+        <button type="button" class="rounded-md px-3">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
+            <path
+              d="M17.9997 19.1663L13.9163 23.2497C13.7636 23.4025 13.5691 23.4788 13.333 23.4788C13.0969 23.4788 12.9025 23.4025 12.7497 23.2497C12.5969 23.0969 12.5205 22.9025 12.5205 22.6663C12.5205 22.4302 12.5969 22.2358 12.7497 22.083L16.833 17.9997L12.7497 13.9163C12.5969 13.7636 12.5205 13.5691 12.5205 13.333C12.5205 13.0969 12.5969 12.9025 12.7497 12.7497C12.9025 12.5969 13.0969 12.5205 13.333 12.5205C13.5691 12.5205 13.7636 12.5969 13.9163 12.7497L17.9997 16.833L22.083 12.7497C22.2358 12.5969 22.4302 12.5205 22.6663 12.5205C22.9025 12.5205 23.0969 12.5969 23.2497 12.7497C23.4025 12.9025 23.4788 13.0969 23.4788 13.333C23.4788 13.5691 23.4025 13.7636 23.2497 13.9163L19.1663 17.9997L23.2497 22.083C23.4025 22.2358 23.4788 22.4302 23.4788 22.6663C23.4788 22.9025 23.4025 23.0969 23.2497 23.2497C23.0969 23.4025 22.9025 23.4788 22.6663 23.4788C22.4302 23.4788 22.2358 23.4025 22.083 23.2497L17.9997 19.1663Z"
+              fill="#80858E"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="flex justify-between flex-wrap">
+      <div class="w-0 flex-1 flex">
+        <h3 class="text-lg font-medium">
+          Step 2. Choose a child-action for each loop element
+        </h3>
+      </div>
+    </div>
+
+    <div class="mt-1 mb-2 text-sm" *ngIf="mainselectedElement.length < 2">
+      <p>Add action you want the bot to do on the page</p>
+    </div>
+
+    <div class="mb-2 text-sm gap-3 bg-white rounded-3xl">
+      <button
+        (click)="onChoosingSubAction('click')"
+        [class]="{
+          'border-blue-400': isClickedSubAction,
+          'border-gray-500': !isClickedSubAction
+        }"
+        class="px-1 py-1 border-b-gray-600 rounded-lg"
+      >
+        <div class="flex flex-col items-center">
+          <span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M15.2442 21.952L16.8478 20.3485L20.3485 16.8478L21.952 15.2442C23.5937 13.6026 24.4145 12.7818 24.2207 11.8995C24.0269 11.0173 22.9377 10.616 20.7592 9.81341L13.4936 7.13662C9.14776 5.5355 6.97482 4.73495 5.85488 5.85488C4.73495 6.97482 5.5355 9.14775 7.13661 13.4936L9.8134 20.7592C10.616 22.9377 11.0173 24.0269 11.8995 24.2207C12.7818 24.4145 13.6026 23.5936 15.2442 21.952Z"
+                fill="#805DCA"
+              />
+              <path
+                opacity="0.5"
+                d="M16.8477 20.3493L22.0987 25.6004C22.6424 26.1441 22.9143 26.416 23.2176 26.5416C23.6219 26.7091 24.0762 26.7091 24.4806 26.5416C24.7839 26.416 25.0557 26.1441 25.5994 25.6004C26.1431 25.0567 26.415 24.7849 26.5406 24.4816C26.7081 24.0772 26.7081 23.6229 26.5406 23.2185C26.415 22.9153 26.1431 22.6434 25.5994 22.0997L20.3484 16.8486L16.8477 20.3493Z"
+                fill="#805DCA"
+              />
+            </svg>
+          </span>
+          <p class="text-sm ftext-dark-grey-900">Click a button</p>
+          <p class="text-xs leading-7 text-dark-grey-600">
+            allows you to click on a button for read element
+          </p>
+        </div>
+      </button>
+
+      <button
+        (click)="onChoosingSubAction('input')"
+        [class]="{
+          'border-blue-500': isInputSubActions,
+          'border-gray-300': !isInputSubActions
+        }"
+        class="px-5 py-5"
+      >
+        <div class="flex flex-col items-center">
+          <span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M10.6667 2.667L10.5789 2.667C9.39692 2.66693 8.3785 2.66687 7.56295 2.77652C6.68893 2.89403 5.85113 3.15902 5.17158 3.83857C4.49203 4.51812 4.22704 5.35592 4.10953 6.22994C3.99988 7.04549 3.99994 8.06391 4 9.24589L4.00001 9.33367V10.6003C4.00001 11.3367 4.59696 11.9337 5.33334 11.9337C6.06972 11.9337 6.66667 11.3367 6.66667 10.6003V9.33367C6.66667 8.03889 6.6695 7.20195 6.75241 6.58527C6.83017 6.00695 6.9557 5.82569 7.0572 5.72419C7.1587 5.62269 7.33996 5.49716 7.91828 5.41941C8.53495 5.3365 9.3719 5.33367 10.6667 5.33367H14.6667H17.3333H21.3333C22.6281 5.33367 23.4651 5.3365 24.0817 5.41941C24.6601 5.49716 24.8413 5.62269 24.9428 5.72419C25.0443 5.82569 25.1698 6.00695 25.2476 6.58527C25.3305 7.20195 25.3333 8.03889 25.3333 9.33367V10.6003C25.3333 11.3367 25.9303 11.9337 26.6667 11.9337C27.4031 11.9337 28 11.3367 28 10.6003L28 9.24592C28.0001 8.06393 28.0001 7.0455 27.8905 6.22994C27.773 5.35592 27.508 4.51812 26.8284 3.83857C26.1489 3.15902 25.3111 2.89403 24.4371 2.77652C23.6215 2.66687 22.6031 2.66693 21.4211 2.667L10.6667 2.667Z"
+                fill="#00AB55"
+              />
+              <path
+                opacity="0.5"
+                d="M17.3337 5.33301H14.667V26.6663H17.3337V5.33301Z"
+                fill="#00AB55"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8 28.0003C8 27.2639 8.59695 26.667 9.33333 26.667H22.6667C23.403 26.667 24 27.2639 24 28.0003C24 28.7367 23.403 29.3337 22.6667 29.3337H9.33333C8.59695 29.3337 8 28.7367 8 28.0003Z"
+                fill="#00AB55"
+              />
+            </svg>
+          </span>
+          <p class="text-sm ftext-dark-grey-900">Input Text</p>
+          <p class="text-xs leading-7 text-dark-grey-600">
+            allows you to input text for each element
+          </p>
+        </div>
+      </button>
+    </div>
+
+    <div class="mr-5 sm:px-6 sm:flex sm:flex-row-reverse">
+      <button
+        type="button"
+        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+        [class]="{
+          'bg-blue-500 text-white': mainselectedElement.length,
+          'bg-gray-200': !mainselectedElement.length
+        }"
+        (click)="runBot()"
+        [disabled]="!mainselectedElement.length"
+      >
+        Run Bot
+      </button>
+    </div>
   </div>
+
+  <div class="step-3" *ngIf="steps === 3">
+    <div class="flex justify-between flex-wrap">
+      <div class="w-0 flex-1 flex"></div>
+      <div>
+        <button type="button" class="rounded-md focus:outline-none">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18 8.75C12.8914 8.75 8.75 12.8914 8.75 18C8.75 23.1086 12.8914 27.25 18 27.25C23.1086 27.25 27.25 23.1086 27.25 18C27.25 12.8914 23.1086 8.75 18 8.75ZM7.25 18C7.25 12.0629 12.0629 7.25 18 7.25C23.9371 7.25 28.75 12.0629 28.75 18C28.75 23.9371 23.9371 28.75 18 28.75C12.0629 28.75 7.25 23.9371 7.25 18ZM18 13.75C17.3787 13.75 16.875 14.2537 16.875 14.875C16.875 15.2892 16.5392 15.625 16.125 15.625C15.7108 15.625 15.375 15.2892 15.375 14.875C15.375 13.4253 16.5503 12.25 18 12.25C19.4497 12.25 20.625 13.4253 20.625 14.875C20.625 15.8383 20.1056 16.6796 19.3353 17.1354C19.1385 17.2518 18.9761 17.3789 18.8703 17.5036C18.7675 17.6246 18.75 17.7036 18.75 17.75V19C18.75 19.4142 18.4142 19.75 18 19.75C17.5858 19.75 17.25 19.4142 17.25 19V17.75C17.25 17.2441 17.4715 16.8336 17.7266 16.533C17.9786 16.236 18.2929 16.0092 18.5715 15.8444C18.9044 15.6474 19.125 15.2866 19.125 14.875C19.125 14.2537 18.6213 13.75 18 13.75ZM18 23C18.5523 23 19 22.5523 19 22C19 21.4477 18.5523 21 18 21C17.4477 21 17 21.4477 17 22C17 22.5523 17.4477 23 18 23Z"
+              fill="#80858E"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div>
+        <button type="button" class="rounded-md px-3">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="18" cy="18" r="18" fill="#F3F5F8" />
+            <path
+              d="M17.9997 19.1663L13.9163 23.2497C13.7636 23.4025 13.5691 23.4788 13.333 23.4788C13.0969 23.4788 12.9025 23.4025 12.7497 23.2497C12.5969 23.0969 12.5205 22.9025 12.5205 22.6663C12.5205 22.4302 12.5969 22.2358 12.7497 22.083L16.833 17.9997L12.7497 13.9163C12.5969 13.7636 12.5205 13.5691 12.5205 13.333C12.5205 13.0969 12.5969 12.9025 12.7497 12.7497C12.9025 12.5969 13.0969 12.5205 13.333 12.5205C13.5691 12.5205 13.7636 12.5969 13.9163 12.7497L17.9997 16.833L22.083 12.7497C22.2358 12.5969 22.4302 12.5205 22.6663 12.5205C22.9025 12.5205 23.0969 12.5969 23.2497 12.7497C23.4025 12.9025 23.4788 13.0969 23.4788 13.333C23.4788 13.5691 23.4025 13.7636 23.2497 13.9163L19.1663 17.9997L23.2497 22.083C23.4025 22.2358 23.4788 22.4302 23.4788 22.6663C23.4788 22.9025 23.4025 23.0969 23.2497 23.2497C23.0969 23.4025 22.9025 23.4788 22.6663 23.4788C22.4302 23.4788 22.2358 23.4025 22.083 23.2497L17.9997 19.1663Z"
+              fill="#80858E"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="flex justify-between flex-wrap">
+      <div class="w-0 flex-1 flex">
+        <h3 class="text-lg font-medium">
+          Step 3. Click <span *ngIf="isClickedSubAction">a button</span>
+          <span *ngIf="isInputSubActions">an input field</span>
+        </h3>
+        <p
+          class="py-5"
+          *ngIf="!subselectedElement.length || isClickedSubAction"
+        >
+          Select an <span *ngIf="isInputSubActions">input</span> element
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="mt-6 mb-4 text-sm"
+      *ngIf="isInputSubActions && subselectedElement.length"
+    >
+      <p>Enter some text</p>
+      <input
+        type="text"
+        placeholder="Ex: search keyword, Description"
+        class="px-2 py-5 my-2"
+        [(ngModel)]="inputValue"
+      />
+    </div>
+
+    <div class="px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+      <button
+        type="button"
+        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-500 text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm"
+        (click)="steps = 2"
+      >
+        Save
+      </button>
+      <button
+        type="button"
+        class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+        (click)="reset()"
+      >
+        Reset
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="inspector-size-indicator"
+    [style]="sizeStyle"
+    *ngIf="showOverlay"
+  ></div>
 </div>

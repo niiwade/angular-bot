@@ -1,3 +1,23 @@
-.hover-highlight:hover {
-  border: 2px solid blue;
+.inspector-size-indicator {
+  @apply z-[9999] fixed bg-[#a4ffa45e] border transition-all duration-[0.1s] ease-[ease-in] pointer-events-none rounded-[5px] border-solid border-[#42b88350];
 }
+::ng-deep .--selectedby-user {
+  @apply border border-solid border-[#00c400];
+}
+::ng-deep .--selectedby-user .--dashes {
+  @apply border-dashed border-4 border-teal-600 bg-teal-400 p-8 inline-block;
+}
+::ng-deep .--selectedby-user .--dark {
+  @apply border-2;
+}
+::ng-deep .--bot-selected {
+  @apply border border-solid border-[#003cff];
+}
+::ng-deep .--bot-selected .--dashes {
+  @apply border-2 border-dashed border-[#3cff0b];
+}
+::ng-deep .--bot-selected .--dark {
+  @apply border-[3px];
+}
+
+

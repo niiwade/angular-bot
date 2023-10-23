@@ -245,6 +245,10 @@ ul.todo-list li .delete:after {
   background-color: #d6d6d6 !important;
 }
 
+.border-dashed {
+  border-style: dashed;
+}
+
 .todo-checkbox:checked + label:after {
   position: absolute;
   content: "";

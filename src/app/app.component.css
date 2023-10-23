@@ -12,11 +12,3 @@
   border-radius: 5px;
   width: 90%;
 }
-
-.blue-box:hover {
-  border: 1px solid blue;
-}
-
-.green-box {
-  border: 1px solid green;
-}
